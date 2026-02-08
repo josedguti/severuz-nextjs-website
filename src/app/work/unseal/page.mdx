@@ -1,0 +1,63 @@
+import logo from '@/images/clients/unseal/logomark-dark.svg'
+import imageHero from './hero.jpg'
+import imageEmilySelman from './emily-selman.jpg'
+
+export const caseStudy = {
+  client: 'SaaS Analytics Platform',
+  title: 'Scalable API infrastructure for data analytics',
+  description:
+    'A cloud-native analytics platform with microservices architecture, real-time data processing, and RESTful APIs serving millions of requests per day.',
+  summary: [
+    'Designed and built a scalable API infrastructure using Node.js microservices, GraphQL, and Redis caching to handle high-volume data analytics workloads.',
+    'Deployed on AWS with auto-scaling groups, load balancers, and multi-region redundancy to ensure 99.99% uptime and sub-100ms response times.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2024-08',
+  service: 'API Development, Cloud Architecture, DevOps',
+  testimonial: {
+    author: { name: 'Client Name', role: 'CTO of Analytics Company' },
+    content:
+      'Severuz transformed our infrastructure from monolithic to microservices, dramatically improving our scalability and performance. Their cloud architecture expertise was invaluable.',
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Case Study`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+This project focused on modernizing a legacy analytics platform that was struggling to handle increasing data volumes and user traffic. The client needed a scalable, cloud-native solution that could process millions of analytics events per day while maintaining fast response times.
+
+We designed a microservices architecture with distinct services for data ingestion, processing, storage, and API access. The API layer uses GraphQL to provide flexible querying capabilities, while Redis caching dramatically improves performance for frequently-accessed data.
+
+The entire infrastructure runs on AWS using containerized services with Docker and Kubernetes. We implemented auto-scaling policies that automatically adjust resources based on traffic patterns, ensuring cost efficiency during quiet periods and reliability during traffic spikes.
+
+## What we did
+
+<TagList>
+  <TagListItem>Node.js Microservices</TagListItem>
+  <TagListItem>GraphQL API</TagListItem>
+  <TagListItem>Docker & Kubernetes</TagListItem>
+  <TagListItem>AWS Cloud Infrastructure</TagListItem>
+  <TagListItem>Redis Caching</TagListItem>
+  <TagListItem>CI/CD Pipeline</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Client Name', role: 'CTO of Analytics Company' }}
+  image={{ src: imageEmilySelman }}
+>
+  Severuz transformed our infrastructure from monolithic to microservices,
+  dramatically improving our scalability and performance. Their cloud
+  architecture expertise was invaluable.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="99.99%" label="API uptime" />
+  <StatListItem value="<80ms" label="Avg response time" />
+  <StatListItem value="10M+" label="Daily requests" />
+  <StatListItem value="60%" label="Cost reduction" />
+</StatList>

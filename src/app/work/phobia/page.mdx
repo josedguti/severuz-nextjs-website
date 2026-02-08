@@ -1,0 +1,63 @@
+import logo from '@/images/clients/phobia/logomark-dark.svg'
+import imageHero from './hero.jpg'
+import imageJennyWilson from './jenny-wilson.jpg'
+
+export const caseStudy = {
+  client: 'Mobile Fitness App',
+  title: 'Cross-platform fitness tracking application',
+  description:
+    'A comprehensive fitness tracking app for iOS and Android with workout plans, progress tracking, and social features to keep users motivated.',
+  summary: [
+    'Built a cross-platform mobile app using React Native with native performance, offline-first architecture, and real-time sync across devices.',
+    'Integrated with wearable devices and health platforms, providing users with comprehensive fitness data and personalized recommendations.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2024-07',
+  service: 'Mobile App Development, UI/UX Design, API Integration',
+  testimonial: {
+    author: { name: 'Client Name', role: 'Founder & CEO' },
+    content:
+      'The team at Severuz brought our vision to life with a beautiful, performant mobile app. Their expertise in React Native and attention to user experience was invaluable.',
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Case Study`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+This project focused on creating a mobile fitness application that would help users track their workouts, monitor progress, and stay motivated through social features. The client needed a solution that worked seamlessly across both iOS and Android platforms.
+
+We developed a cross-platform mobile app using React Native, ensuring native performance and a smooth user experience on both platforms. The app features an offline-first architecture, allowing users to log workouts even without internet connectivity, with automatic synchronization when back online.
+
+The application integrates with popular wearable devices and health platforms like Apple Health and Google Fit, providing users with comprehensive fitness data in one place. We implemented personalized workout recommendations based on user goals, fitness level, and progress.
+
+## What we did
+
+<TagList>
+  <TagListItem>React Native App</TagListItem>
+  <TagListItem>iOS & Android</TagListItem>
+  <TagListItem>Offline-First Architecture</TagListItem>
+  <TagListItem>Wearable Device Integration</TagListItem>
+  <TagListItem>Real-time Sync</TagListItem>
+  <TagListItem>Push Notifications</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Client Name', role: 'Founder & CEO' }}
+  image={{ src: imageJennyWilson }}
+>
+  The team at Severuz brought our vision to life with a beautiful, performant
+  mobile app. Their expertise in React Native and attention to user experience
+  was invaluable.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="4.8" label="App Store rating" />
+  <StatListItem value="100K+" label="Downloads" />
+  <StatListItem value="<2s" label="App launch time" />
+  <StatListItem value="95%" label="User retention" />
+</StatList>
