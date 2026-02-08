@@ -45,7 +45,7 @@ Successfully customized the Tailwind UI Studio template for **Severuz** - a soft
 
 #### Contact Page (`/contact`)
 - Updated location info to reflect Toronto-based remote work
-- Changed email addresses to `hello@severuz.com` and `projects@severuz.com`
+- Changed email address to `severuzsolutions@gmail.com`
 - Removed "offices" section, replaced with "Location & Work Style"
 - Commented out social media section (to be added later)
 - Updated intro text
