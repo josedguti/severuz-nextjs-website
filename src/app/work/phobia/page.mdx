@@ -1,9 +1,6 @@
-import logo from '@/images/clients/phobia/logomark-dark.svg'
 import imageHero from './hero.jpg'
-import imageJennyWilson from './jenny-wilson.jpg'
 
 export const caseStudy = {
-  client: 'Mobile Fitness App',
   title: 'Cross-platform fitness tracking application',
   description:
     'A comprehensive fitness tracking app for iOS and Android with workout plans, progress tracking, and social features to keep users motivated.',
@@ -11,19 +8,12 @@ export const caseStudy = {
     'Built a cross-platform mobile app using React Native with native performance, offline-first architecture, and real-time sync across devices.',
     'Integrated with wearable devices and health platforms, providing users with comprehensive fitness data and personalized recommendations.',
   ],
-  logo,
   image: { src: imageHero },
-  date: '2024-07',
-  service: 'Mobile App Development, UI/UX Design, API Integration',
-  testimonial: {
-    author: { name: 'Client Name', role: 'Founder & CEO' },
-    content:
-      'The team at Severuz brought our vision to life with a beautiful, performant mobile app. Their expertise in React Native and attention to user experience was invaluable.',
-  },
+  technologies: ['React Native', 'iOS', 'Android', 'Node.js', 'Apple Health', 'Google Fit'],
 }
 
 export const metadata = {
-  title: `${caseStudy.client} Case Study`,
+  title: `${caseStudy.title} - Project`,
   description: caseStudy.description,
 }
 
@@ -45,19 +35,3 @@ The application integrates with popular wearable devices and health platforms li
   <TagListItem>Real-time Sync</TagListItem>
   <TagListItem>Push Notifications</TagListItem>
 </TagList>
-
-<Blockquote
-  author={{ name: 'Client Name', role: 'Founder & CEO' }}
-  image={{ src: imageJennyWilson }}
->
-  The team at Severuz brought our vision to life with a beautiful, performant
-  mobile app. Their expertise in React Native and attention to user experience
-  was invaluable.
-</Blockquote>
-
-<StatList>
-  <StatListItem value="4.8" label="App Store rating" />
-  <StatListItem value="100K+" label="Downloads" />
-  <StatListItem value="<2s" label="App launch time" />
-  <StatListItem value="95%" label="User retention" />
-</StatList>

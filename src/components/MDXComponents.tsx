@@ -2,6 +2,7 @@ import clsx from 'clsx'
 
 import { Blockquote } from '@/components/Blockquote'
 import { Border } from '@/components/Border'
+import { Button } from '@/components/Button'
 import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
 import { StatList, StatListItem } from '@/components/StatList'
 import { TagList, TagListItem } from '@/components/TagList'
@@ -12,6 +13,12 @@ export const MDXComponents = {
     ...props
   }: React.ComponentPropsWithoutRef<typeof Blockquote>) {
     return <Blockquote className={clsx('my-32', className)} {...props} />
+  },
+  Button({
+    className,
+    ...props
+  }: React.ComponentPropsWithoutRef<typeof Button>) {
+    return <Button className={clsx('mt-8', className)} {...props} />
   },
   img: function Img({
     className,

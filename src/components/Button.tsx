@@ -32,6 +32,22 @@ export function Button({
     )
   }
 
+  // Check if it's an external link
+  const isExternal = props.href.toString().startsWith('http')
+
+  if (isExternal) {
+    return (
+      <a
+        className={className}
+        href={props.href.toString()}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {inner}
+      </a>
+    )
+  }
+
   return (
     <Link className={className} {...props}>
       {inner}

@@ -2,7 +2,6 @@ import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Blockquote } from '@/components/Blockquote'
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
 import { ContactSection } from '@/components/ContactSection'
@@ -18,7 +17,6 @@ import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
 import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
 import logoPhobia from '@/images/clients/phobia/logo-dark.svg'
 import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
-import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import { RootLayout } from '@/components/RootLayout'
 
@@ -36,33 +34,10 @@ function CaseStudies({
       </FadeIn>
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
         {caseStudies.map((caseStudy) => (
-          <FadeIn key={caseStudy.client}>
+          <FadeIn key={caseStudy.title}>
             <article>
-              <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
-                <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
-                  <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
-                    <Image
-                      src={caseStudy.logo}
-                      alt=""
-                      className="h-16 w-16 flex-none"
-                      unoptimized
-                    />
-                    <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
-                      {caseStudy.client}
-                    </h3>
-                  </div>
-                  <div className="mt-1 flex gap-x-4 sm:mt-0 lg:block">
-                    <p className="text-sm tracking-tight text-neutral-950 after:ml-4 after:font-semibold after:text-neutral-300 after:content-['/'] lg:mt-2 lg:after:hidden">
-                      {caseStudy.service}
-                    </p>
-                    <p className="text-sm text-neutral-950 lg:mt-2">
-                      <time dateTime={caseStudy.date}>
-                        {formatDate(caseStudy.date)}
-                      </time>
-                    </p>
-                  </div>
-                </div>
-                <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
+              <Border className="pt-16">
+                <div className="max-w-3xl">
                   <p className="font-display text-4xl font-medium text-neutral-950">
                     <Link href={caseStudy.href}>{caseStudy.title}</Link>
                   </p>
@@ -71,22 +46,34 @@ function CaseStudies({
                       <p key={paragraph}>{paragraph}</p>
                     ))}
                   </div>
-                  <div className="mt-8 flex">
+                  {caseStudy.technologies && caseStudy.technologies.length > 0 && (
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {caseStudy.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="rounded-full bg-neutral-100 px-3 py-1 text-sm text-neutral-600"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  <div className="mt-8 flex gap-4">
                     <Button
                       href={caseStudy.href}
-                      aria-label={`Read case study: ${caseStudy.client}`}
+                      aria-label={`View project: ${caseStudy.title}`}
                     >
-                      Read case study
+                      View project
                     </Button>
+                    {caseStudy.liveUrl && (
+                      <Button
+                        href={caseStudy.liveUrl}
+                        aria-label={`Visit live site: ${caseStudy.title}`}
+                      >
+                        Visit site
+                      </Button>
+                    )}
                   </div>
-                  {caseStudy.testimonial && (
-                    <Blockquote
-                      author={caseStudy.testimonial.author}
-                      className="mt-12"
-                    >
-                      {caseStudy.testimonial.content}
-                    </Blockquote>
-                  )}
                 </div>
               </Border>
             </article>

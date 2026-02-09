@@ -60,12 +60,10 @@ function PageLink({ page }: { page: Page }) {
 
 export function PageLinks({
   title,
-  pages,
   intro,
   className,
 }: {
   title: string
-  pages: Array<Page>
   intro?: string
   className?: string
 }) {
@@ -81,16 +79,6 @@ export function PageLinks({
       <SectionIntro title={title} smaller>
         {intro && <p>{intro}</p>}
       </SectionIntro>
-
-      <Container className={intro ? 'mt-24' : 'mt-16'}>
-        <FadeInStagger className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
-          {pages.map((page) => (
-            <FadeIn key={page.href}>
-              <PageLink page={page} />
-            </FadeIn>
-          ))}
-        </FadeInStagger>
-      </Container>
     </div>
   )
 }

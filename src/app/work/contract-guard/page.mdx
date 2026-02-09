@@ -1,0 +1,41 @@
+import imageHero from './ContractGuard.png'
+import logoContractGuard from '@/images/contract_guard_logo.png'
+
+export const caseStudy = {
+  title: 'AI-powered legal document analyzer with risk assessment',
+  description:
+    'An intelligent contract review platform that analyzes legal documents in seconds, identifying risks, providing actionable recommendations, and highlighting critical action items.',
+  summary: [
+    'Built an AI-powered web application that analyzes legal contracts and documents uploaded as PDF, Word, or images, leveraging natural language processing to identify potential risks and compliance issues.',
+    'Delivers comprehensive risk assessments, personalized recommendations, and prioritized action items, helping users make informed decisions about their legal agreements quickly and confidently.',
+  ],
+  image: { src: imageHero },
+  logo: logoContractGuard,
+  technologies: ['React', 'Next.js', 'OpenAI API', 'Document AI'],
+  liveUrl: 'https://contract-guard-ai-app.vercel.app/',
+}
+
+export const metadata = {
+  title: `${caseStudy.title} - Project`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+Contract Guard was designed to democratize access to legal expertise by leveraging artificial intelligence to analyze complex legal documents. Users can upload contracts, agreements, and legal documents in multiple formats (PDF, Word, or even images), and receive instant, comprehensive analysis.
+
+We built a sophisticated document processing pipeline that extracts text from various file formats, applies advanced natural language processing and AI models to understand legal terminology and context, and generates detailed risk assessments. The platform identifies potential issues, unfavorable terms, missing clauses, and compliance concerns.
+
+## What we did
+
+<TagList>
+  <TagListItem>Next.js Web Application</TagListItem>
+  <TagListItem>AI Integration (OpenAI GPT-5)</TagListItem>
+  <TagListItem>Document Processing Pipeline</TagListItem>
+  <TagListItem>PDF/Word/Image OCR</TagListItem>
+  <TagListItem>Risk Assessment Engine</TagListItem>
+</TagList>
+
+<div className="text-center">
+  <Button href="https://contract-guard-ai-app.vercel.app/">Visit Live Site</Button>
+</div>

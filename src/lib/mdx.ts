@@ -1,26 +1,33 @@
 import { type ImageProps } from 'next/image'
 import glob from 'fast-glob'
 
-async function loadEntries<T extends { date: string }>(
+async function loadEntries<T>(
   directory: string,
   metaName: string,
 ): Promise<Array<MDXEntry<T>>> {
-  return (
-    await Promise.all(
-      (await glob('**/page.mdx', { cwd: `src/app/${directory}` })).map(
-        async (filename) => {
-          let metadata = (await import(`../app/${directory}/${filename}`))[
-            metaName
-          ] as T
-          return {
-            ...metadata,
-            metadata,
-            href: `/${directory}/${filename.replace(/\/page\.mdx$/, '')}`,
-          }
-        },
-      ),
-    )
-  ).sort((a, b) => b.date.localeCompare(a.date))
+  let entries = await Promise.all(
+    (await glob('**/page.mdx', { cwd: `src/app/${directory}` })).map(
+      async (filename) => {
+        let metadata = (await import(`../app/${directory}/${filename}`))[
+          metaName
+        ] as T
+        return {
+          ...metadata,
+          metadata,
+          href: `/${directory}/${filename.replace(/\/page\.mdx$/, '')}`,
+        }
+      },
+    ),
+  )
+  // Sort by date if available, otherwise maintain original order
+  return entries.sort((a, b) => {
+    const aDate = (a as any).date
+    const bDate = (b as any).date
+    if (aDate && bDate) {
+      return bDate.localeCompare(aDate)
+    }
+    return 0
+  })
 }
 
 type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string }
@@ -39,21 +46,13 @@ export interface Article {
 }
 
 export interface CaseStudy {
-  date: string
-  client: string
   title: string
   description: string
   summary: Array<string>
-  logo: ImageProps['src']
   image: ImagePropsWithOptionalAlt
-  service: string
-  testimonial: {
-    author: {
-      name: string
-      role: string
-    }
-    content: string
-  }
+  logo?: ImageProps['src']
+  technologies?: Array<string>
+  liveUrl?: string
 }
 
 export function loadArticles() {

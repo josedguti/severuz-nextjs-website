@@ -1,9 +1,6 @@
-import logo from '@/images/clients/unseal/logomark-dark.svg'
 import imageHero from './hero.jpg'
-import imageEmilySelman from './emily-selman.jpg'
 
 export const caseStudy = {
-  client: 'SaaS Analytics Platform',
   title: 'Scalable API infrastructure for data analytics',
   description:
     'A cloud-native analytics platform with microservices architecture, real-time data processing, and RESTful APIs serving millions of requests per day.',
@@ -11,19 +8,12 @@ export const caseStudy = {
     'Designed and built a scalable API infrastructure using Node.js microservices, GraphQL, and Redis caching to handle high-volume data analytics workloads.',
     'Deployed on AWS with auto-scaling groups, load balancers, and multi-region redundancy to ensure 99.99% uptime and sub-100ms response times.',
   ],
-  logo,
   image: { src: imageHero },
-  date: '2024-08',
-  service: 'API Development, Cloud Architecture, DevOps',
-  testimonial: {
-    author: { name: 'Client Name', role: 'CTO of Analytics Company' },
-    content:
-      'Severuz transformed our infrastructure from monolithic to microservices, dramatically improving our scalability and performance. Their cloud architecture expertise was invaluable.',
-  },
+  technologies: ['Node.js', 'GraphQL', 'Docker', 'Kubernetes', 'AWS', 'Redis'],
 }
 
 export const metadata = {
-  title: `${caseStudy.client} Case Study`,
+  title: `${caseStudy.title} - Project`,
   description: caseStudy.description,
 }
 
@@ -45,19 +35,3 @@ The entire infrastructure runs on AWS using containerized services with Docker a
   <TagListItem>Redis Caching</TagListItem>
   <TagListItem>CI/CD Pipeline</TagListItem>
 </TagList>
-
-<Blockquote
-  author={{ name: 'Client Name', role: 'CTO of Analytics Company' }}
-  image={{ src: imageEmilySelman }}
->
-  Severuz transformed our infrastructure from monolithic to microservices,
-  dramatically improving our scalability and performance. Their cloud
-  architecture expertise was invaluable.
-</Blockquote>
-
-<StatList>
-  <StatListItem value="99.99%" label="API uptime" />
-  <StatListItem value="<80ms" label="Avg response time" />
-  <StatListItem value="10M+" label="Daily requests" />
-  <StatListItem value="60%" label="Cost reduction" />
-</StatList>
