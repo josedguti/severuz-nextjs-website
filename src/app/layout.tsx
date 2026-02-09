@@ -5,7 +5,7 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: '%s - Severuz',
-    default: 'Severuz - Software Engineering & Consulting Services',
+    default: 'Severuz - Software Engineering Solutions',
   },
 }
 
