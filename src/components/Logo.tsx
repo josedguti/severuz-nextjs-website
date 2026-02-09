@@ -21,12 +21,7 @@ export function Logomark({
       )}
       {...props}
     >
-      <Image
-        src={logoMark}
-        alt="Severuz"
-        className={clsx('h-12 w-auto', invert && 'brightness-0 invert')}
-        unoptimized
-      />
+      <Image src={logoMark} alt="Severuz" className="h-12 w-auto" unoptimized />
     </div>
   )
 }
@@ -51,9 +46,8 @@ export function Logo({
         src={logoFull}
         alt="Severuz"
         className={clsx(
-          'h-20 w-40 transition-opacity duration-300',
+          'h-30 w-60 transition-opacity duration-300',
           filled ? 'opacity-100' : 'opacity-90 hover:opacity-100',
-          invert && 'brightness-0 invert',
         )}
         unoptimized
       />

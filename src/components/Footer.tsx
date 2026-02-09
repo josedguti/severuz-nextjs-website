@@ -85,8 +85,8 @@ function NewsletterForm() {
         Stay Updated
       </h2>
       <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest updates on new projects, technologies,
-        and software development insights.
+        Subscribe to get the latest updates on new projects, technologies, and
+        software development insights.
       </p>
       <div className="relative mt-6">
         <input
@@ -121,7 +121,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
-          <Link href="/" aria-label="Home">
+          <Link href="/" aria-label="Home" className="mb-4">
             <Logo className="h-8" fillOnHover />
           </Link>
           <p className="text-sm text-neutral-700">

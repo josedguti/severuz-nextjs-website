@@ -76,7 +76,7 @@ function ContactForm() {
           <TextInput label="Message" name="message" />
         </div>
         <Button type="submit" className="mt-10">
-          Let\'s work together
+          Let's work together
         </Button>
       </form>
     </FadeIn>
@@ -90,7 +90,7 @@ function ContactDetails() {
         Location & Work Style
       </h2>
       <p className="mt-6 text-base text-neutral-600">
-        Based in Toronto and working remotely with clients worldwide. We\'re
+        Based in Toronto and working remotely with clients worldwide. We're
         flexible with meeting times and available for virtual consultations.
       </p>
 
@@ -101,9 +101,7 @@ function ContactDetails() {
           Email us
         </h2>
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
-          {[
-            ['Email', 'severuzsolutions@gmail.com'],
-          ].map(([label, email]) => (
+          {[['Email', 'severuzsolutions@gmail.com']].map(([label, email]) => (
             <div key={email}>
               <dt className="font-semibold text-neutral-950">{label}</dt>
               <dd>
@@ -132,16 +130,20 @@ function ContactDetails() {
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Ready to start your next project? Get in touch and let\'s discuss how we can help bring your ideas to life.',
+  description:
+    "Ready to start your next project? Get in touch and let's discuss how we can help bring your ideas to life.",
 }
 
 export default function Contact() {
   return (
     <RootLayout>
-      <PageIntro eyebrow="Contact us" title="Let\'s build something great together">
+      <PageIntro
+        eyebrow="Contact us"
+        title="Let's build something great together"
+      >
         <p>
-          Ready to discuss your project? Reach out and let\'s start the conversation
-          about how we can help you achieve your goals.
+          Ready to discuss your project? Reach out and let's start the
+          conversation about how we can help you achieve your goals.
         </p>
       </PageIntro>
 

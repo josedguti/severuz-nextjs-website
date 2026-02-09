@@ -39,7 +39,7 @@ function Clients() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We\'ve worked with hundreds of amazing people
+            We've worked with hundreds of amazing people
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -131,8 +131,9 @@ function Services() {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          From initial consultation to deployment and beyond, we partner with you
-          to create robust, scalable solutions that drive your business forward.
+          From initial consultation to deployment and beyond, we partner with
+          you to create robust, scalable solutions that drive your business
+          forward.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -150,22 +151,23 @@ function Services() {
             <ListItem title="Web Application Development">
               We build modern, responsive web applications using cutting-edge
               technologies like React, Next.js, and Node.js. From MVPs to
-              enterprise solutions, we create applications that scale with your business.
+              enterprise solutions, we create applications that scale with your
+              business.
             </ListItem>
             <ListItem title="Mobile Application Development">
-              Native iOS and Android apps, or cross-platform solutions with React
-              Native and Flutter. We develop mobile experiences that users love
-              and businesses rely on.
+              Native iOS and Android apps, or cross-platform solutions with
+              React Native and Flutter. We develop mobile experiences that users
+              love and businesses rely on.
             </ListItem>
             <ListItem title="API Development & Integration">
-              RESTful APIs, GraphQL, and microservices architecture. We design and
-              build robust backend systems that power your applications and
+              RESTful APIs, GraphQL, and microservices architecture. We design
+              and build robust backend systems that power your applications and
               integrate seamlessly with third-party services.
             </ListItem>
             <ListItem title="Cloud Architecture & Consulting">
-              Cloud infrastructure design and deployment on AWS, Google Cloud, and
-              Azure. We help you leverage cloud technologies for scalability,
-              reliability, and cost-effectiveness.
+              Cloud infrastructure design and deployment on AWS, Google Cloud,
+              and Azure. We help you leverage cloud technologies for
+              scalability, reliability, and cost-effectiveness.
             </ListItem>
           </List>
         </div>
@@ -190,9 +192,10 @@ export default async function Home() {
             Building scalable software solutions for modern businesses.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We\'re a software engineering consulting company that helps businesses
-            bring their ideas to life through custom web applications, mobile apps,
-            and cloud-based solutions. Let\'s build something great together.
+            We're a software engineering consulting company that helps
+            businesses bring their ideas to life through custom web
+            applications, mobile apps, and cloud-based solutions. Let's build
+            something great together.
           </p>
         </FadeIn>
       </Container>
